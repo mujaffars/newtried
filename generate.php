@@ -17,7 +17,7 @@ if ($numbers !== '' && trim($numbers) !== '')
 $newNumbers = array();
 if (count($revealedNos) < 90) {
     $revealCnt = 0;
-    if ($_POST) {
+    if ($_POST && $_POST['key'] === '8161931a734726cf2f92758da8da7647') {
         do {
             $randNo = rand(1, 90);
             if (!in_array($randNo, $revealedNos)) {
@@ -68,7 +68,9 @@ if ($newNumbers !== '' && trim($newNumbers) !== '') {
         <?php } ?>
         <br/>
     </div>
-    <div>
+    <div>               
+        <br/>
+        <input type="text" name="key" id="key" value="" placeholder="Enter key"/>  
         <input type="hidden" name="hdnField" id="hdnField" value="post"/>               
         <br/>
         <br/>
